@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8"/>
+	<script src="jquery.min.js"></script>
+    <script src="jquery.qrcode.min.js"></script>
+</head>
+<body>
+<div id="qrcode">
+</div>
+
+<script>
+    window.onload =function(){
+        $("#qrcode").qrcode({ 
+			width: 200, //宽度 
+			height:200, //高度 
+			text: "http://www.qq.com" //任意内容 
+		}); 
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+window.addEventListener('deviceorientation', this.orientationListener, false); //方向感应器  
+window.addEventListener('MozOrientation', this.orientationListener, false); //方向感应器 for firefox      
+window.addEventListener('devicemotion', this.orientationListener, false); //重力加速感应器 for iphone, android 

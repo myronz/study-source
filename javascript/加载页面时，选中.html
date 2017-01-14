@@ -1,0 +1,24 @@
+<script type="text/javascript">
+	//加载页面时，判断天猫入口
+	$(window).load(function() {
+        var category_id = $('#category_id').val();
+		select_category(category_id);
+    });
+	
+	$(document).ready(function(){
+		$('#category_id').change(function(){
+			var category_id = $(this).val();
+			select_category(category_id);
+		});
+	});
+	
+	function select_category(category_id){
+		//如果是天猫商城入口/折扣/活动等微信菜单,加入缩略图
+		if(category_id == '21' || category_id == '1' || category_id == '2'){
+			var thumb_html = '<tr id="tmall"><td class="tdleft">缩略图</td><td><input type="file" name="thumb" id="thumb" class="span3" /></td></tr>';
+			var temp = $('#category_id').parent().parent().after(thumb_html);
+		}else{
+			$('#tmall').remove();
+		}
+	}
+</script>
